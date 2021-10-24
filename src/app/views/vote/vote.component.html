@@ -1,0 +1,37 @@
+<div class="container">
+    <!-- <div class="card">
+        <label>Enter the name of the picture you're voting for</label>
+    
+        <div class="container-2">
+            <form #castVote="ngForm" (ngSubmit)= "onClickSubmit(castVote.value)" >
+                <input required [(ngModel)]="picturePhrase" #word="ngModel" class="form-control">
+                <div class="alert alert-danger" *ngIf=" word.touched && !word.valid"> Error </div> 
+                <button mat-button (click)="confirmSubmission()" type="submit" value="submit">Submit</button>
+            </form>
+        </div>
+    </div> -->
+
+
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Enter the Picture's name</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../../../assets/images/jack.jpg">
+    <mat-card-content>
+      <p>
+        Votes from the same person are not tracked (I only had 3 days to make this site) so 
+        be fair and keep it one vote per-person
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <div class="container-2">
+            <form #castVote="ngForm" (ngSubmit)= "onClickSubmit(castVote.value)" >
+                <input required [(ngModel)]="picturePhrase" #word="ngModel" class="form-control">
+                <div class="alert alert-danger" *ngIf=" word.touched && !word.valid"> Error </div> 
+                <button mat-button (click)="confirmSubmission()" type="submit" value="submit">Submit</button>
+            </form>
+        </div>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

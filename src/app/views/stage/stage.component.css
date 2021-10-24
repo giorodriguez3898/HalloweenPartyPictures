@@ -1,0 +1,12 @@
+.container {
+  background-image: url(../../../assets/images/ballroom.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.slideshow {
+    display: block;
+    height: 600px;
+    width: 1200px;
+    padding: 2em;
+  }
