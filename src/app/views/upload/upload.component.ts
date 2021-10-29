@@ -43,10 +43,6 @@ export class UploadComponent implements OnInit {
          }
        }
        );
-
-
-       console.log("logging response message");
-       console.log(this.message);
   }
 
   //Gets called when the user clicks on retieve image button to get the image from back end

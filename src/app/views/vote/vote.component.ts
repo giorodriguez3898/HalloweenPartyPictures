@@ -18,12 +18,17 @@ export class VoteComponent implements OnInit {
   }
 
   confirmSubmission(){
-    this.http.post<any>('https://reqres.in/api/posts', this.picturePhrase ).subscribe(data => {
+    const uploadImageData = new FormData();
+    uploadImageData.append('imageName', "test from angular name");
+    uploadImageData.append('imageAddy', "test from angular addy");
+
+    this.http.post<any>('http://localhost:8080/halloween/test2', uploadImageData ).subscribe(data => {
       this.response = data
+      console.log("printing vote test data");
+      console.log(data);
   })
 
-  if (this.response == "good")
-    this.submissionConfirmed = true;
+
 
 }
 

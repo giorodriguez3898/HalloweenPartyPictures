@@ -26,11 +26,14 @@
     </mat-card-content>
     <mat-card-actions>
         <div class="container-2">
-            <form #castVote="ngForm" (ngSubmit)= "onClickSubmit(castVote.value)" >
+            <!-- <form #castVote="ngForm" (ngSubmit)= "onClickSubmit(castVote.value)" >
                 <input required [(ngModel)]="picturePhrase" #word="ngModel" class="form-control">
                 <div class="alert alert-danger" *ngIf=" word.touched && !word.valid"> Error: Please type a picture name</div> 
                 <button mat-button (click)="confirmSubmission()" type="submit" value="submit">Submit</button>
-            </form>
+            </form> -->
+              <input required [(ngModel)]="picturePhrase"class="form-control">
+              <button mat-button (click)="confirmSubmission()" type="submit" value="submit">Submit</button>
+          
             <ng-template *ngIf = "submissionConfirmed"><h3>Vote was Submitted</h3></ng-template>
         </div>
     </mat-card-actions>

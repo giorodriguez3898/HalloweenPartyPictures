@@ -1,6 +1,22 @@
-<div class="container">
+<!-- <div class="container">
     <div class="slideshow">
         <carousel [slides] = "slides" ></carousel>
+    </div>
+
+    <div class="show">
+        <div *ngIf=retrievedImage>
+            <a href="/some-page"><img [src]="retrievedImage" class="oversize" /></a>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="slideshow" *ngIf="retrievedImage">
+        <ng-container>
+            <img [src]="retrievedImage"/>
+        </ng-container>
+        
+        <h1 *ngIf="!database_populated">No Photo's to show. Please go back and upload</h1>
     </div>
 </div>
 
