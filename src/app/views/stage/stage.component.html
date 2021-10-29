@@ -14,9 +14,8 @@
     <div class="slideshow" *ngIf="retrievedImage">
         <ng-container>
             <img [src]="retrievedImage"/>
+            <h1 *ngIf="!database_populated" style="color: red;">No Photo's to show. Please go back and upload</h1>
         </ng-container>
-        
-        <h1 *ngIf="!database_populated">No Photo's to show. Please go back and upload</h1>
     </div>
 </div>
 
